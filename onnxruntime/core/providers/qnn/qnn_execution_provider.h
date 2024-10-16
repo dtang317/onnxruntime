@@ -153,6 +153,8 @@ class QNNExecutionProvider : public IExecutionProvider {
 #ifdef _WIN32
   onnxruntime::logging::EtwRegistrationManager::EtwInternalCallback callback_ETWSink_provider_;
 #endif
+  bool enable_qnn_graph_dump_ = false;
+  std::string qnn_graph_dump_dir_ = "";
 
   class PerThreadContext final {
    public:
